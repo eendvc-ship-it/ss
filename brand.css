@@ -1,0 +1,189 @@
+/* S&S Automations — Brand component & utility classes.
+   The class vocabulary every S&S surface is built from. Source: ss-brand SKILL.md.
+   Pair with tokens/*.css (imported via styles.css). No gradients, shadows, glows, or
+   rounded corners anywhere — those are brand violations, not style choices. */
+
+/* ---------- Reset-ish base ---------- */
+.ss-root, .ss-root * { box-sizing: border-box; }
+.ss-root {
+  font-family: var(--ss-font);
+  color: var(--ss-ink);
+  background: var(--ss-offwhite);     /* canvas is warm off-white, never #fff */
+  text-align: left;                    /* §6: left-align everything */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Type atoms ---------- */
+.ss-hero {                 /* 4a */
+  font-weight: var(--ss-w-heavy);
+  font-size: var(--ss-hero-size);
+  line-height: var(--ss-hero-lh);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.ss-section-headline {     /* 4b */
+  font-weight: var(--ss-w-heavy);
+  font-size: var(--ss-section-size);
+  line-height: var(--ss-section-lh);
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+.ss-subline {              /* 4d — italic, muted, one line of context */
+  font-weight: var(--ss-w-regular);
+  font-style: italic;
+  font-size: var(--ss-subline-size);
+  color: var(--ss-sub-ink);
+  margin: 6px 0 0;
+}
+.ss-body {                 /* 4e */
+  font-weight: var(--ss-w-medium);
+  font-size: var(--ss-body-size);
+  line-height: var(--ss-body-lh);
+  margin: 0;
+}
+.ss-muted { color: var(--ss-sub-ink); }
+.on-dark .ss-muted, .ss-on-dark .ss-muted { color: var(--ss-muted-on-dark); }
+
+/* Em-dash label (4c) — rule + gap + spaced caps. Use sparingly (Hero/Closer/major pivot). */
+.ss-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ss-space-2);
+  font-weight: var(--ss-w-bold);
+  font-size: var(--ss-label-size);
+  letter-spacing: var(--ss-label-tracking);
+  text-transform: uppercase;
+  color: var(--ss-ink);
+}
+.ss-label::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* Numbered item (4f) — two-digit bold number + offset content */
+.ss-num-item { display: grid; grid-template-columns: var(--ss-num-offset) 1fr; column-gap: 16px; align-items: baseline; }
+.ss-num { font-weight: var(--ss-w-bold); font-size: var(--ss-num-size); letter-spacing: 0.04em; }
+.ss-num-item + .ss-num-item { margin-top: 12px; }
+
+/* Hairline rule (between sections on light) */
+.ss-hairline { border: 0; border-top: var(--ss-hairline-w) solid var(--ss-hairline); margin: var(--ss-space-6) 0; }
+
+/* ---------- Dark surfaces ---------- */
+.ss-on-dark { background: var(--ss-black); color: var(--ss-offwhite); }
+/* Em-dash labels invert to off-white on any black surface (panel or .ss-on-dark zone),
+   otherwise the ink-black default renders invisible on black. */
+.ss-on-dark .ss-label,
+.ss-hero-panel .ss-label,
+.ss-closer-panel .ss-label { color: var(--ss-offwhite); }
+
+/* Move 1 / Move 4: Hero & Closer panels (PRINT/CARD ONLY — never on web/long-form) */
+.ss-hero-panel,
+.ss-closer-panel {
+  background: var(--ss-black);
+  color: var(--ss-offwhite);
+  min-height: var(--ss-hero-h);
+  padding: var(--ss-rail);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ss-space-4);
+  position: relative;
+}
+.ss-hero-panel .ss-hero,
+.ss-closer-panel .ss-hero { color: var(--ss-offwhite); margin-top: auto; max-width: 18ch; }
+.ss-panel-tag {            /* optional metadata, bottom-right, muted */
+  position: absolute;
+  right: var(--ss-rail);
+  bottom: var(--ss-rail);
+  font-size: var(--ss-label-size);
+  letter-spacing: var(--ss-label-tracking);
+  text-transform: uppercase;
+  color: var(--ss-muted-on-dark);
+}
+
+/* Move 2 / Move 5: Warm gray strip (card device; punctuation between Hero and body) */
+.ss-warm-strip {
+  background: var(--ss-warmgray);
+  color: var(--ss-ink);
+  min-height: var(--ss-strip-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--ss-w-bold);
+  font-size: var(--ss-footer-size);
+  letter-spacing: var(--ss-footer-tracking);
+  text-transform: uppercase;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+/* Move 3: Section block (light) */
+.ss-section-block { padding: var(--ss-space-6) var(--ss-rail); }
+.ss-section-block > * + * { margin-top: var(--ss-space-4); }
+.ss-section-block .ss-num-item + .ss-num-item { margin-top: 12px; }
+
+/* Move 6: Two-column split (50/50 with vertical hairline) */
+.ss-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: stretch;
+  background: var(--ss-offwhite);
+}
+.ss-two-col > .ss-divider { background: var(--ss-hairline); }
+.ss-two-col > .ss-col { padding: var(--ss-rail); display: flex; flex-direction: column; gap: var(--ss-space-3); }
+
+/* Minimal footer (non-card docs): small muted contact line — NOT a warm strip */
+.ss-footer-line { font-size: 12px; color: var(--ss-sub-ink); padding: var(--ss-space-5) var(--ss-rail); }
+
+/* ---------- WEB context (§5b) ---------- */
+.ss-web { background: var(--ss-offwhite); }            /* single flat canvas, no panels */
+.ss-web-section { padding: var(--ss-space-8) var(--ss-rail); max-width: 880px; }
+.ss-web-section > * + * { margin-top: var(--ss-space-4); }
+.ss-cat-label {                                         /* spaced-caps category label */
+  font-weight: var(--ss-w-bold);
+  font-size: var(--ss-label-size);
+  letter-spacing: var(--ss-label-tracking);
+  text-transform: uppercase;
+  color: var(--ss-sub-ink);
+}
+
+/* CTA buttons (§5b) — hard edges, no shadow, title case, no period */
+.ss-btn, .ss-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ss-font);
+  font-weight: var(--ss-w-bold);
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  padding: 14px 24px;
+  border-radius: var(--ss-radius);
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid var(--ss-black);
+}
+.ss-btn { background: var(--ss-black); color: var(--ss-offwhite); }
+.ss-btn-secondary { background: var(--ss-offwhite); color: var(--ss-ink); }
+.ss-btn-stack { display: inline-flex; flex-direction: column; gap: 12px; }  /* primary over secondary */
+
+/* Marketplace shelf + tiles (§5c — PROVISIONAL look, brand invariants locked) */
+.ss-shelf { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ss-tile {
+  border: 1px solid var(--ss-hairline);
+  background: var(--ss-offwhite);     /* default fill: off-white (90/10 web proportion) */
+  padding: 20px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ss-radius);    /* 0 — hard edge */
+}
+.ss-tile--dark { background: var(--ss-black); color: var(--ss-offwhite); border-color: var(--ss-black); }
+.ss-tile--dark .ss-tile-price, .ss-tile--dark .ss-tile-desc { color: var(--ss-muted-on-dark); }
+.ss-tile-name { font-weight: var(--ss-w-heavy); font-size: 18px; letter-spacing: -0.005em; }
+.ss-tile-price { font-weight: var(--ss-w-medium); font-size: 14px; color: var(--ss-ink); margin-top: 10px; }
+.ss-tile-desc { font-size: 13px; line-height: 1.5; color: var(--ss-sub-ink); margin-top: auto; }  /* bottom-anchored */
+.ss-build-id { font-size: 11px; letter-spacing: var(--ss-label-tracking); text-transform: uppercase; color: var(--ss-sub-ink); }
+.ss-tile--soon { background: var(--ss-offwhite); }
+.ss-tile--soon .ss-tile-name { color: var(--ss-sub-ink); }
+.ss-tile--bring { border-style: solid; }

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&amp;S Automations — Design System</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+  body { margin: 0; }
+  .wrap { max-width: 1100px; padding: var(--ss-space-8) var(--ss-rail); }
+  .group { margin-top: var(--ss-space-8); }
+  .group:first-of-type { margin-top: var(--ss-space-6); }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: var(--ss-space-5); }
+  figure { margin: 0; border: 1px solid var(--ss-hairline); background: var(--ss-offwhite); }
+  figure iframe { width: 100%; height: 320px; border: 0; display: block; border-bottom: 1px solid var(--ss-hairline); background: var(--ss-offwhite); }
+  figcaption { padding: 12px 16px; }
+  figcaption .n { font-weight: var(--ss-w-bold); font-size: 14px; }
+  figcaption .d { font-size: 12px; color: var(--ss-sub-ink); margin-top: 4px; }
+  figcaption a { color: var(--ss-ink); font-size: 12px; }
+</style>
+</head>
+<body class="ss-root">
+<div class="wrap">
+  <span class="ss-label">S&amp;S Automations</span>
+  <h1 class="ss-hero" style="margin-top:16px">The design system.</h1>
+  <p class="ss-body ss-muted" style="margin-top:12px;max-width:60ch">Every component below is built from the locked palette, type scale, and signature moves. Same brand across three contexts — print/card, web, and document — different layout discipline in each.</p>
+
+  <section class="group">
+    <h2 class="ss-section-headline">Foundations.</h2>
+    <div class="cards">
+      <figure><iframe src="components/foundations/Colors/Colors.html"></iframe><figcaption><div class="n">Colors</div><div class="d">8 locked monochrome tokens · no accents</div></figcaption></figure>
+      <figure><iframe src="components/foundations/Typography/Typography.html"></iframe><figcaption><div class="n">Typography</div><div class="d">Heavy neo-grotesque scale · headlines end with a period</div></figcaption></figure>
+      <figure><iframe src="components/foundations/Logo/Logo.html"></iframe><figcaption><div class="n">Logo</div><div class="d">Black-on-light / off-white-on-dark · transparent</div></figcaption></figure>
+      <figure><iframe src="components/foundations/EmDashLabel/EmDashLabel.html"></iframe><figcaption><div class="n">EmDashLabel</div><div class="d">Rule + spaced caps · use sparingly</div></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="ss-section-headline">Print &amp; card.</h2>
+    <p class="ss-subline">~70% off-white / 25% black / 5% warm gray. Hero and Closer panels live here.</p>
+    <div class="cards">
+      <figure><iframe src="components/print/HeroPanel/HeroPanel.html"></iframe><figcaption><div class="n">HeroPanel</div><div class="d">Move 1 · black opening panel</div></figcaption></figure>
+      <figure><iframe src="components/print/CloserPanel/CloserPanel.html"></iframe><figcaption><div class="n">CloserPanel</div><div class="d">Move 4 · lands the offer</div></figcaption></figure>
+      <figure><iframe src="components/print/WarmGrayStrip/WarmGrayStrip.html"></iframe><figcaption><div class="n">WarmGrayStrip</div><div class="d">Move 2/5 · the one centered element</div></figcaption></figure>
+      <figure><iframe src="components/print/SectionBlock/SectionBlock.html"></iframe><figcaption><div class="n">SectionBlock</div><div class="d">Move 3 · headline + numbered items + hairline</div></figcaption></figure>
+      <figure><iframe src="components/print/TwoColumnSplit/TwoColumnSplit.html"></iframe><figcaption><div class="n">TwoColumnSplit</div><div class="d">Move 6 · founder cards / comparisons</div></figcaption></figure>
+      <figure><iframe src="components/print/BusinessCard/BusinessCard.html"></iframe><figcaption><div class="n">BusinessCard</div><div class="d">Hero front + always-visible strip</div></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="ss-section-headline">Web.</h2>
+    <p class="ss-subline">~90% off-white / 10% black. Flat canvas, no panels — black only for CTAs.</p>
+    <div class="cards">
+      <figure><iframe src="components/web/CtaButtons/CtaButtons.html"></iframe><figcaption><div class="n">CtaButtons</div><div class="d">Primary over secondary · hard edges</div></figcaption></figure>
+      <figure><iframe src="components/web/WebSection/WebSection.html"></iframe><figcaption><div class="n">WebSection</div><div class="d">Long-form section · whitespace separates</div></figcaption></figure>
+      <figure><iframe src="components/web/MarketplaceTile/MarketplaceTile.html"></iframe><figcaption><div class="n">MarketplaceTile</div><div class="d">Live / coming-soon / bring-it-to-us</div></figcaption></figure>
+      <figure><iframe src="components/web/Storefront/Storefront.html"></iframe><figcaption><div class="n">Storefront</div><div class="d">Hero + tile shelf page</div></figcaption></figure>
+      <figure><iframe src="components/web/ProductDetail/ProductDetail.html"></iframe><figcaption><div class="n">ProductDetail</div><div class="d">Origin · what it does · price · CTA</div></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2 class="ss-section-headline">Document.</h2>
+    <p class="ss-subline">~100% off-white. Term sheets, specs, agreements — no panels at all.</p>
+    <div class="cards">
+      <figure><iframe src="components/document/DocumentPage/DocumentPage.html"></iframe><figcaption><div class="n">DocumentPage</div><div class="d">Document Mode · logo, headings, table, signatures</div></figcaption></figure>
+    </div>
+  </section>
+</div>
+</body>
+</html>

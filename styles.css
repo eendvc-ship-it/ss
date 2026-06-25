@@ -1,0 +1,7 @@
+/* S&S Automations design system — single entry stylesheet.
+   Rendered designs receive only this file's @import closure, so everything the brand
+   needs is reachable from here. Import order: tokens first, then the brand classes. */
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./brand.css";
