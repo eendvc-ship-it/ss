@@ -1,0 +1,67 @@
+<!-- @dsCard group="Web" name="ProductDetail" subtitle="Product detail page — build-ID badge, origin, what it does, customization, CTA" w=960 h=860 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&amp;S — Product Detail</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  /* Page-only layout. Brand classes carry the look. */
+  body { margin: 0; }
+  .pd { max-width: 760px; padding: var(--ss-space-8) var(--ss-rail); }
+  .pd > * + * { margin-top: var(--ss-space-6); }
+  .pd-head > * + * { margin-top: 14px; }
+  .pd-list { list-style: none; margin: 0; padding: 0; }
+  .pd-list li { padding-left: 18px; position: relative; }
+  .pd-list li + li { margin-top: 10px; }
+  .pd-list li::before { content: "-"; position: absolute; left: 0; color: var(--ss-sub-ink); }
+  .pd-price { font-weight: var(--ss-w-heavy); font-size: 20px; }
+</style>
+</head>
+<body class="ss-root ss-web">
+  <main class="pd">
+    <div class="pd-head">
+      <span class="ss-cat-label">S&amp;S Automations · Product</span>
+      <h1 class="ss-hero">Google Drive auto-sorter.</h1>
+      <div class="ss-build-id">SS-GDR-003</div>
+    </div>
+
+    <section>
+      <span class="ss-cat-label">Origin</span>
+      <p class="ss-body" style="margin-top:12px">A client was losing an hour a day dragging files into the right folders by hand. We watched it happen for a week, then built the thing that does it for them. It has run quietly ever since — so we put it on the shelf.</p>
+    </section>
+
+    <section>
+      <h2 class="ss-section-headline">What it does.</h2>
+      <ul class="pd-list ss-body" style="margin-top:14px">
+        <li>Watches your Drive for new files as they land.</li>
+        <li>Reads name, type, and content to decide where each one belongs.</li>
+        <li>Files it into the right folder — no dragging, no guessing.</li>
+        <li>Flags anything it isn't sure about for a quick human look.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="ss-section-headline">Make it yours.</h2>
+      <ul class="pd-list ss-body" style="margin-top:14px">
+        <li>Custom folder rules mapped to how your team already works.</li>
+        <li>Naming conventions enforced on the way in.</li>
+        <li>Slack or email alerts when something needs a decision.</li>
+        <li>Connect the sorter to your CRM or project tool.</li>
+      </ul>
+    </section>
+
+    <section>
+      <span class="ss-cat-label">Price</span>
+      <p class="pd-price" style="margin-top:10px">From $500 setup · $79/mo</p>
+    </section>
+
+    <hr class="ss-hairline">
+
+    <a class="ss-btn" href="#audit">Book a free workflow audit</a>
+  </main>
+
+  <div class="ss-footer-line">WORKFLOWS AND AUTOMATIONS · SS-AUTOMATIONS.COM</div>
+</body>
+</html>

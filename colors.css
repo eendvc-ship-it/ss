@@ -1,0 +1,14 @@
+/* S&S Automations — Color System (Monochromatic, locked).
+   Source of truth: ss-brand SKILL.md §3. Never edit hex values without Lance's sign-off.
+   Hard rules: never #ffffff (use --ss-offwhite), never #000000 (use --ss-black),
+   no gradients, no shadows, no glows, no accent colors. */
+:root {
+  --ss-black: #0a0a0a;        /* Hero/Closer panels, body text on light */
+  --ss-offwhite: #f5f2ed;     /* Primary background, text on dark — warm, NEVER pure white */
+  --ss-warmgray: #e8e5e0;     /* Strip dividers, business-card always-visible strip */
+  --ss-mid-dark: #1e1e1e;     /* Subtle secondary dark zones (rare) */
+  --ss-ink: #0a0a0a;          /* Text on light backgrounds */
+  --ss-sub-ink: #5a5a5a;      /* Muted labels on light, build-ID badge, coming-soon */
+  --ss-muted-on-dark: #a8a39e;/* Secondary text on black panels */
+  --ss-hairline: #d4d0ca;     /* Horizontal/vertical section rules on light */
+}

@@ -1,0 +1,21 @@
+/* S&S Automations — Spacing & Layout tokens.
+   Source: ss-brand SKILL.md §6. Hard left margin/content rail, generous whitespace,
+   hard rectangular edges (radius is ALWAYS 0 — there are no rounded corners in S&S). */
+:root {
+  --ss-rail: 48px;        /* hard left margin / content rail on letter (~48pt) */
+  --ss-num-offset: 28px;  /* numbered-item content offset from its 01/02 number */
+
+  --ss-space-2: 8px;      /* em-dash gap */
+  --ss-space-3: 12px;
+  --ss-space-4: 16px;
+  --ss-space-5: 24px;
+  --ss-space-6: 32px;     /* warm-gray strip height band, block gaps */
+  --ss-space-7: 48px;     /* section separation on web (whitespace does the work) */
+  --ss-space-8: 72px;     /* large web section rhythm */
+
+  --ss-hero-h: 240px;     /* Hero/Closer panel band — print 200–260pt */
+  --ss-strip-h: 36px;     /* warm-gray strip — print 30–40pt */
+
+  --ss-radius: 0;         /* LOCKED: hard rectangular edges only, everywhere */
+  --ss-hairline-w: 1px;   /* horizontal/vertical rules — print 0.5–0.8pt */
+}

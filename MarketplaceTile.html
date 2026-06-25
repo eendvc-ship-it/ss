@@ -1,0 +1,45 @@
+<!-- @dsCard group="Web" name="MarketplaceTile" subtitle="Hard-edged product tile (PROVISIONAL) — live / soon / bring" w=820 h=300 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&S — Marketplace Tile</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  body { margin: 0; }
+  .wrap { padding: var(--ss-rail); }
+  .shelf3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+</style>
+</head>
+<body class="ss-root ss-web">
+  <div class="wrap">
+    <div class="ss-shelf shelf3">
+      <!-- live -->
+      <article class="ss-tile">
+        <div class="ss-tile-name">Quote-to-invoice sync</div>
+        <div class="ss-tile-price">From $500 setup · $79/mo</div>
+        <div class="ss-tile-desc">
+          <div class="ss-build-id" style="margin-bottom:8px">SS-GDR-003</div>
+          Turns an approved quote into a sent invoice without retyping a thing.
+        </div>
+      </article>
+      <!-- soon -->
+      <article class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Inbox triage</div>
+        <div class="ss-tile-desc">
+          <div class="ss-build-id" style="margin-bottom:8px">Coming soon</div>
+          Sorts and routes incoming mail so the right person sees it first.
+        </div>
+      </article>
+      <!-- bring -->
+      <article class="ss-tile ss-tile--bring">
+        <div class="ss-tile-name">Don't see your idea? Bring it to us.</div>
+        <div class="ss-tile-desc">
+          Book a free workflow audit and we'll scope a build around it.
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

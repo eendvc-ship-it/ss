@@ -1,0 +1,74 @@
+<!-- @dsCard group="Document" name="DocumentPage" subtitle="Document Mode page — logo, bold headings, clean table, signature block, 100% off-white" w=860 h=1000 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&amp;S — Document</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  /* Document Mode (§9b): 100% off-white, no panels, no strips, no em-dash labels.
+     Page-only layout below; brand tokens carry color/type. */
+  body { margin: 0; }
+  .doc { max-width: 720px; padding: var(--ss-space-7) var(--ss-rail) var(--ss-space-8); }
+  .doc-logo { width: 64px; height: auto; display: block; }
+  .doc-title { font-weight: var(--ss-w-heavy); font-size: 30px; line-height: 1.1; letter-spacing: -0.01em; margin: var(--ss-space-5) 0 0; }
+  .doc-subtitle { font-style: italic; font-size: 15px; color: var(--ss-sub-ink); margin: 8px 0 0; }
+  .doc h1 { font-weight: var(--ss-w-heavy); font-size: 20px; letter-spacing: -0.005em; margin: var(--ss-space-6) 0 0; }
+  .doc p { font-weight: var(--ss-w-medium); font-size: 16px; line-height: 1.55; margin: 12px 0 0; }
+  .doc-list { list-style: none; margin: 12px 0 0; padding: 0; }
+  .doc-list li { padding-left: 18px; position: relative; font-size: 16px; line-height: 1.55; font-weight: var(--ss-w-medium); }
+  .doc-list li + li { margin-top: 8px; }
+  .doc-list li::before { content: "-"; position: absolute; left: 0; color: var(--ss-sub-ink); }
+  .doc-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .doc-table th, .doc-table td { text-align: left; padding: 10px 12px; font-size: 15px; border-bottom: 1px solid var(--ss-hairline); }
+  .doc-table th { font-weight: var(--ss-w-bold); border-bottom: 1px solid var(--ss-ink); }
+  .doc-table td { font-weight: var(--ss-w-medium); }
+  .doc-aside { font-style: italic; color: var(--ss-sub-ink); font-size: 15px; line-height: 1.5; margin-top: 16px; }
+  .doc-sign { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ss-space-6); margin-top: var(--ss-space-7); }
+  .doc-sign .line { border-top: 1px solid var(--ss-ink); padding-top: 8px; font-size: 13px; color: var(--ss-sub-ink); }
+  .doc-sign .line .who { font-weight: var(--ss-w-bold); color: var(--ss-ink); font-size: 14px; }
+</style>
+</head>
+<body class="ss-root">
+  <main class="doc">
+    <img class="doc-logo" src="../../../assets/ss_logo_black_transparent.png" alt="S&amp;S Automations">
+
+    <h1 class="doc-title" style="margin-top:24px">Scope of Work — Drive Auto-Sorter.</h1>
+    <p class="doc-subtitle">S&amp;S Automations LLC · June 2026 · v1.0</p>
+
+    <h1>Overview.</h1>
+    <p>This document sets the scope, terms, and acceptance criteria for the Google Drive auto-sorter build. It is the working agreement between S&amp;S Automations LLC and the client named below. Plain terms, no surprises.</p>
+
+    <h1>What we deliver.</h1>
+    <ul class="doc-list">
+      <li>A live sorter watching the client's Drive for new files.</li>
+      <li>Folder rules mapped to the client's existing structure.</li>
+      <li>Alerts for any file the sorter cannot place with confidence.</li>
+      <li>A short handoff walkthrough and a one-page run-book.</li>
+    </ul>
+
+    <h1>Terms.</h1>
+    <table class="doc-table">
+      <thead>
+        <tr><th>Item</th><th>Terms</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Setup</td><td>$500 one-time, due at kickoff</td></tr>
+        <tr><td>Subscription</td><td>$79/mo, billed monthly per business</td></tr>
+        <tr><td>Build window</td><td>Two weeks from signed scope</td></tr>
+        <tr><td>Support</td><td>Included while the subscription is active</td></tr>
+      </tbody>
+    </table>
+
+    <p class="doc-aside">If the sorter saves you less time than promised in the first month, the monthly fee pauses until it does.</p>
+
+    <div class="doc-sign">
+      <div class="line"><span class="who">S&amp;S Automations LLC</span><br>Signature · Date</div>
+      <div class="line"><span class="who">Client</span><br>Signature · Date</div>
+    </div>
+
+    <div class="ss-footer-line" style="padding-left:0">S&amp;S Automations LLC · Ohio · ss-automations.com</div>
+  </main>
+</body>
+</html>

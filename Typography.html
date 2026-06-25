@@ -1,0 +1,72 @@
+<!-- @dsCard group="Foundations" name="Typography" subtitle="Heavy neo-grotesque type scale — hero to footer strip" w=960 h=860 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&S — Typography</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  /* preview-only layout — type styles all come from brand.css */
+  body { margin: 0; }
+  header { padding: var(--ss-rail) var(--ss-rail) 0; }
+  .scale { padding: var(--ss-space-6) var(--ss-rail) var(--ss-rail); }
+  .row { padding: var(--ss-space-5) 0; border-top: var(--ss-hairline-w) solid var(--ss-hairline); }
+  .row:first-child { border-top: 0; }
+  .spec { font-size: 12px; color: var(--ss-sub-ink); letter-spacing: .04em; text-transform: uppercase; margin: 10px 0 0; }
+  .dark-row { background: var(--ss-black); padding: var(--ss-space-5) var(--ss-rail); }
+</style>
+</head>
+<body class="ss-root">
+  <header>
+    <span class="ss-label">S&amp;S Automations · Type</span>
+    <h1 class="ss-section-headline" style="margin-top:14px">The type scale.</h1>
+    <p class="ss-subline">Heavy neo-grotesque only. Left-aligned. Every headline ends with a period.</p>
+  </header>
+
+  <div class="scale">
+    <div class="row">
+      <h2 class="ss-hero">Every business leaks.</h2>
+      <p class="spec">Hero headline · ss-hero · 48px / 800 · top of doc, Hero Panel · ends with period</p>
+    </div>
+
+    <div class="row">
+      <h3 class="ss-section-headline">Quantify and expand the pain.</h3>
+      <p class="spec">Section headline · ss-section-headline · 24px / 800 · top of each section · ends with period</p>
+    </div>
+
+    <div class="row">
+      <span class="ss-label">THE OFFER</span>
+      <p class="spec">Em-dash label · ss-label · 12px / 700 · 0.18em tracking · rule + gap + spaced caps · use sparingly</p>
+    </div>
+
+    <div class="row">
+      <h3 class="ss-section-headline">Understand the operation.</h3>
+      <p class="ss-subline">BETA embedded — Who · How · Why surface here.</p>
+      <p class="spec">Sub-line · ss-subline · 15px / 400 italic · muted · one line of context under a headline</p>
+    </div>
+
+    <div class="row">
+      <p class="ss-body">We find where your business leaks time and money — then we plug it. Medium weight, left-aligned, ink on light.</p>
+      <p class="spec">Body · ss-body · 16px / 500 · ink #0a0a0a on light, off-white on dark · always left-aligned</p>
+    </div>
+
+    <div class="row">
+      <div class="ss-num-item"><span class="ss-num">01</span><span class="ss-body">Two-digit bold number at the rail, content offset right.</span></div>
+      <div class="ss-num-item"><span class="ss-num">02</span><span class="ss-body">Items stay parallel in structure.</span></div>
+      <p class="spec">Numbered item · ss-num-item / ss-num · 11px bold number · 28px content offset</p>
+    </div>
+
+    <div class="row" style="padding-bottom:0">
+      <div class="ss-warm-strip">WORKFLOWS AND AUTOMATIONS · SS-AUTOMATIONS.COM</div>
+      <p class="spec">Footer strip · ss-warm-strip · 13px / 700 caps · 0.16em tracking · centered (the one centered element)</p>
+    </div>
+  </div>
+
+  <div class="dark-row ss-on-dark">
+    <span class="ss-label">S&amp;S AUTOMATIONS</span>
+    <h2 class="ss-hero" style="margin-top:14px">25% of what we save you.</h2>
+    <p class="ss-body ss-muted" style="margin-top:14px">Hero + label + body on black — off-white text, muted secondary.</p>
+  </div>
+</body>
+</html>

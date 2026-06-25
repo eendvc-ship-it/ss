@@ -1,0 +1,10 @@
+{
+  "source": "ss-brand skill (SKILL.md + logo assets)",
+  "shape": "static-html",
+  "projectId": null,
+  "readmeHeader": ".design-sync/conventions.md",
+  "entryStylesheet": "styles.css",
+  "componentRoot": "components",
+  "previewDir": "_preview",
+  "notes": "projectId is null because design-system auth (/design-login) is unavailable in this web session, so nothing has been pushed to claude.ai/design yet. See .design-sync/NOTES.md for how to import. This repo is hand-authored from a brand skill, not produced by the design-sync converter — there is no dist/ to convert."
+}

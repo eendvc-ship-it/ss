@@ -1,0 +1,48 @@
+<!-- @dsCard group="Foundations" name="Logo" subtitle="Circular badge — black on off-white, off-white on black, with clear space" w=960 h=520 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&S — Logo</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  /* preview-only layout */
+  body { margin: 0; }
+  header { padding: var(--ss-rail) var(--ss-rail) 0; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ss-hairline); padding: var(--ss-rail); }
+  .stage { display: flex; align-items: center; justify-content: center; min-height: 240px; }
+  .stage--light { background: var(--ss-offwhite); }
+  .stage--dark { background: var(--ss-black); }
+  /* clear space = half the mark height on all sides */
+  .mark { width: 128px; height: 128px; padding: 64px; box-sizing: content-box; }
+  .mark img { width: 128px; height: 128px; display: block; }
+  /* dashed guide shows the clear-space rule — preview aid only */
+  .mark--guide { outline: 1px dashed var(--ss-hairline); outline-offset: -64px; }
+  .mark--guide.on-dark { outline-color: var(--ss-muted-on-dark); }
+  .caps { padding: 0 var(--ss-rail) var(--ss-rail); }
+  .caps > div { font-size: 12px; color: var(--ss-sub-ink); letter-spacing: .04em; }
+</style>
+</head>
+<body class="ss-root">
+  <header>
+    <span class="ss-label">S&amp;S Automations · Logo</span>
+    <h1 class="ss-section-headline" style="margin-top:14px">Two files. One mark.</h1>
+    <p class="ss-subline">Black on light. Off-white on dark. Transparent PNGs — never a white box. Clear space = half the mark height.</p>
+  </header>
+
+  <div class="pair">
+    <div class="stage stage--light">
+      <div class="mark mark--guide"><img src="../../../assets/ss_logo_black_transparent.png" alt="S&S Automations logo, black"></div>
+    </div>
+    <div class="stage stage--dark">
+      <div class="mark mark--guide on-dark"><img src="../../../assets/ss_logo_offwhite_transparent.png" alt="S&S Automations logo, off-white"></div>
+    </div>
+  </div>
+
+  <div class="caps">
+    <div><strong>variant="black"</strong> — ss_logo_black_transparent.png · place on light / off-white panels</div>
+    <div style="margin-top:6px"><strong>variant="offwhite"</strong> — ss_logo_offwhite_transparent.png · place on black panels (Hero, Closer)</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* S&S Automations — Typography System.
+   Source: ss-brand SKILL.md §4. Heavy neo-grotesque only. Never serif, script, or
+   condensed display fonts with personality (no Bebas/Anton). Everything left-aligned.
+   Sizes here are the SCREEN scale (px); print specs (pt) are noted in each component's
+   .prompt.md. Headlines ALWAYS end with a period — that is copy, enforced by authors. */
+:root {
+  /* Heavy geometric / neo-grotesque stack. Swap in Inter/Aktiv/Founders when licensed. */
+  --ss-font: "Helvetica Neue", Helvetica, Inter, "Aktiv Grotesk", Arial, system-ui, sans-serif;
+
+  /* Weights */
+  --ss-w-heavy: 800;   /* hero + section headlines */
+  --ss-w-bold: 700;    /* labels, numbers, footer strips */
+  --ss-w-medium: 500;  /* body */
+  --ss-w-regular: 400; /* sub-lines (italic) */
+
+  /* Screen type scale (px) */
+  --ss-hero-size: 48px;     /* 4a Hero headline — print 44–52pt */
+  --ss-hero-lh: 1.05;       /* tight leading */
+  --ss-section-size: 24px;  /* 4b Section headline — print 20–26pt */
+  --ss-section-lh: 1.1;
+  --ss-label-size: 12px;    /* 4c Em-dash label — print 7.5–8pt */
+  --ss-label-tracking: 0.18em;
+  --ss-subline-size: 15px;  /* 4d Sub-line — italic, muted */
+  --ss-body-size: 16px;     /* 4e Body — print 10–12pt, screen 14–16px */
+  --ss-body-lh: 1.55;
+  --ss-num-size: 11px;      /* 4f Numbered item label */
+  --ss-footer-size: 13px;   /* 4g Footer strip */
+  --ss-footer-tracking: 0.16em;
+}

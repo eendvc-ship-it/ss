@@ -1,0 +1,71 @@
+<!-- @dsCard group="Web" name="Storefront" subtitle="Marketplace storefront page — hero + 8-tile shelf on flat off-white" w=1080 h=820 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&amp;S — Storefront</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  /* Page-only layout. Brand classes carry the look; this just lays out the page. */
+  body { margin: 0; }
+  .store-hero { padding: var(--ss-space-8) var(--ss-rail) var(--ss-space-6); max-width: 920px; }
+  .store-shelf-wrap { padding: 0 var(--ss-rail) var(--ss-space-8); }
+  .store-shelf-wrap .ss-shelf + .ss-shelf { margin-top: 16px; }
+</style>
+</head>
+<body class="ss-root ss-web">
+  <header class="store-hero">
+    <span class="ss-cat-label">S&amp;S Automations · Marketplace</span>
+    <h1 class="ss-hero" style="margin-top:16px;max-width:20ch">Turning your ideas for a better business into reality.</h1>
+    <p class="ss-subline">Browse what we build. The first one is live — the rest are on the way.</p>
+  </header>
+
+  <section class="store-shelf-wrap">
+    <!-- Row 1 -->
+    <div class="ss-shelf">
+      <div class="ss-tile">
+        <div class="ss-tile-name">Google Drive auto-sorter.</div>
+        <div class="ss-build-id">SS-GDR-003</div>
+        <div class="ss-tile-price">From $500 setup · $79/mo</div>
+        <div class="ss-tile-desc">Files land where they belong, automatically.</div>
+      </div>
+      <div class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Inbox triage.</div>
+        <div class="ss-tile-desc">Coming soon.</div>
+      </div>
+      <div class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Invoice chaser.</div>
+        <div class="ss-tile-desc">Coming soon.</div>
+      </div>
+      <div class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Lead router.</div>
+        <div class="ss-tile-desc">Coming soon.</div>
+      </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="ss-shelf">
+      <div class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Report builder.</div>
+        <div class="ss-tile-desc">Coming soon.</div>
+      </div>
+      <div class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Scheduling sync.</div>
+        <div class="ss-tile-desc">Coming soon.</div>
+      </div>
+      <div class="ss-tile ss-tile--soon">
+        <div class="ss-tile-name">Onboarding flow.</div>
+        <div class="ss-tile-desc">Coming soon.</div>
+      </div>
+      <div class="ss-tile ss-tile--bring">
+        <div class="ss-tile-name">Don't see your idea? Bring it to us.</div>
+        <div class="ss-tile-desc" style="margin-top:auto">
+          <a class="ss-btn" href="#audit">Book a free workflow audit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ss-footer-line">WORKFLOWS AND AUTOMATIONS · SS-AUTOMATIONS.COM</div>
+</body>
+</html>

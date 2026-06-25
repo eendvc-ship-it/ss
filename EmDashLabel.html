@@ -1,0 +1,46 @@
+<!-- @dsCard group="Foundations" name="EmDashLabel" subtitle="Em-dash label atom (§4c) — rule + gap + spaced caps, used sparingly" w=720 h=520 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S&S — Em-dash Label</title>
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  /* preview-only layout */
+  body { margin: 0; }
+  header { padding: var(--ss-rail) var(--ss-rail) 0; }
+  .stack { display: flex; flex-direction: column; gap: var(--ss-space-4); }
+  .panel { padding: var(--ss-space-6) var(--ss-rail); }
+  .panel--light { background: var(--ss-offwhite); }
+  .panel--dark { background: var(--ss-black); }
+  .ctx { font-size: 12px; color: var(--ss-sub-ink); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 var(--ss-space-4); }
+  .panel--dark .ctx { color: var(--ss-muted-on-dark); }
+</style>
+</head>
+<body class="ss-root">
+  <header>
+    <span class="ss-label">S&amp;S Automations · Label</span>
+    <h1 class="ss-section-headline" style="margin-top:14px">The em-dash label.</h1>
+    <p class="ss-subline">Short rule + gap + spaced caps. A rare moment — Hero, Closer, major pivot. Not section ornament.</p>
+  </header>
+
+  <div class="panel panel--light">
+    <p class="ctx">On light</p>
+    <div class="stack">
+      <span class="ss-label">S&amp;S AUTOMATIONS</span>
+      <span class="ss-label">THE OFFER</span>
+      <span class="ss-label">CO-FOUNDER</span>
+    </div>
+  </div>
+
+  <div class="panel panel--dark ss-on-dark">
+    <p class="ctx">On dark</p>
+    <div class="stack">
+      <span class="ss-label">S&amp;S AUTOMATIONS</span>
+      <span class="ss-label">THE OFFER</span>
+      <span class="ss-label">CO-FOUNDER</span>
+    </div>
+  </div>
+</body>
+</html>
